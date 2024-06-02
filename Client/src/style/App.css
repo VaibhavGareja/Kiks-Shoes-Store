@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* hero */
+.hero-btn {
+  background-color: #FF3C78;
+  color: white;
+  border: 1px solid transparent;
+  padding: 10px 47px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.hero-btn:hover {
+  background-color: white;
+  color: #FF3C78;
+  border: 1px solid #FF3C78;
+}
+
+.hero-image img {
+  height: 500px;
+  transition: 1s;
+}
+
+.hero-image img:hover {
+  transform: rotate(20deg);
+}
+
+/* Categories */
+
+.cat {
+  height: 324px;
+}
+
+.half-circle {
+  width: 80px;
+  height: 40px;
+  border-bottom-left-radius: 510px;
+  border-bottom-right-radius: 510px;
+  transform: rotate(34deg);
+  position: relative;
+  left: 73%;
+  bottom: 331px;
+}
+
+.cat img {
+  height: 232px;
+  position: relative;
+  left: 24%;
+  top: 6%;
+}
+
+#cat-1 .half-circle {
+  background: linear-gradient(270deg, #FE7831 0%, #FFDEBE 100%);
+}
+
+#cat-2 .half-circle {
+  background: linear-gradient(97.49deg, #8AA8F8 -0.43%, #315BFF 144.53%);
+}
+
+#cat-3 .half-circle {
+  background: linear-gradient(270deg, #02BE83 0%, #B3F6DC 100%);
+}
+
+
+/* best seller */
+
+.shoes-display {
+  border-radius: 0px 10px 10px 0px;
+  width: 450px;
+  height: 400px;
+}
+.shoes-display-women {
+  border-radius: 0px 10px 10px 0px;
+  width: 450px;
+  height: 400px;
+}
+
+
+
+.shoes-display img {
+  margin-top: 20px;
+  margin-left: 50px;
+  max-width: 160%;
+}
+.shoes-display-women img {
+  margin-top: 20px;
+  margin-left: 50px;
+  max-width: 160%;
+  width: 45rem;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+#shopNow {
+  color: white;
+}
+#shopNow:hover {
+  color: blue;
+}
+
+
+/* Cart  */
+
+.th1 {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.th3 {
+  border-radius: 0px 30px 30px 0px;
+}
+
+/* products page  */
+.MuiPagination-ul li {
+  margin-right: .75rem;
+}
+
+.MuiPagination-ul li button {
+  width: 3rem;
+  height: 3rem;
+  color: #FF3C78;
+  border: #FF3C78 solid 1px;
+}
+.MuiPagination-ul li button:hover {
+  background: pink;
+}
+.css-kvsszq-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #FF3C78 !important;
+  color: white;
+}
+
+.selection{
+  border: 1px solid #FF3C78;
+  border-radius: 3px;
+  color: #FF3C78;
+}

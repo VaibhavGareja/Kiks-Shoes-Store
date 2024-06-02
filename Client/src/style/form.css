@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.main_container {
+    background-color: #f5c5df;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 90%;
+    height: 88vh;
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.form-container {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 240, 251);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignUp-form {
+    width: 25vw;
+    height: 70vh;
+    padding-left: 1rem;
+    background-color: rgb(255, 240, 251);
+    border: 2px solid black;
+    border-radius: 1rem;
+    border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-y: auto;
+}
+
+.Login-form {
+    width: 25vw;
+    height: 55vh;
+    padding-left: 1rem;
+    background-color: rgb(255, 240, 251);
+    border: 2px solid black;
+    border-radius: 1rem;
+    border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-y: auto;
+}
+
+.Login-form img,
+.SignUp-form img {
+    width: 5rem;
+    height: 5rem;
+}
+
+
+
+/* .form-header {
+    display: flex;
+    align-items: center;
+} */
+
+
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-header p {
+    font-size: 19px;
+    padding-top: 25px;
+}
+
+.SignUp-form h1 {
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 20px;
+}
+
+.Login-form h1 {
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 20px;
+}
+
+form {
+    padding-left: 20px;
+}
+
+.input-field input {
+    border-radius: 5px;
+    border-style: none;
+    display: flex;
+    width: 85%;
+    background-color: #ffe2f1;
+    /* padding-top: 5px; */
+    padding: 4px;
+
+}
+
+.form-btn {
+    background-color: #FF3C78;
+    color: white;
+    border: 1px solid transparent;
+    padding: 7px 35px;
+    margin: 0 87px;
+    border-radius: 4px;
+    font-size: 12px;
+
+}
+
+.form-btn:hover {
+    background-color: white;
+    color: #FF3C78;
+    border: 1px solid #FF3C78;
+}
+
+.form-footer {
+    display: flex;
+    /* padding-left: 20px; */
+    margin-top: 10px;
+}
+
+.form-footer p {
+    font-size: small;
+}
+
+.form-footer a {
+    font-size: small;
+}
+
+.close span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #333;
+
+}
+
+.close span:hover {
+    rotate: 90deg;
+    transition: 1s;
+    /* Change color on hover */
+}
