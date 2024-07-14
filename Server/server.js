@@ -1,8 +1,9 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
-const db = require("./helper/db");
 require("dotenv").config()
+dotenv.config();
+const app = express();
+const db = require("./helper/db");
 const PORT = process.env.PORT;
 const bodyParser = require('body-parser');
 const productRoute = require("./routes/productRoute")
@@ -10,8 +11,8 @@ const userRoute = require("./routes/userRoute")
 const Product = require("./model/productSchema");
 const productData = require("./topProducts.json")
 
-
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../Client/dist')));
 app.use(bodyParser.raw({type: 'application/json'}));
 app.use(cors());
 
@@ -29,6 +30,9 @@ app.use("/auth",userRoute)
 //     console.error("Error inserting products into the database:", err);
 //   }
 // })();
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../Client/dist', 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`Server started at port ${PORT}`);
