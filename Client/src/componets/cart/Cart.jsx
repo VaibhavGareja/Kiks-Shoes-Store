@@ -21,7 +21,7 @@ const Cart = () => {
       totalPrice
     }
     axios
-      .post("http://localhost:3000/create-checkout-session", {data})
+      .post("https://api.render.com/deploy/srv-cq9ta12ju9rs73bacd4g?key=KeiE0KAW03I/create-checkout-session", {data})
       .then((res) => {
         console.log(res);
         if (res.data.url) {
