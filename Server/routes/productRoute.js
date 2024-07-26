@@ -1,8 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { fetchAllProducts, checkOutPayment } = require("../controller/product");
+const { fetchAllProducts, fetchPrductById, featuredProducts, fetchProductsForMen, checkOutPayment, fetchProductsForWomen } = require("../controller/product");
 
 router.get("/products", fetchAllProducts);
+router.get("/product/:id", fetchPrductById)
+router.get("/products/featuredProducts", featuredProducts)
+router.get("/products/men", fetchProductsForMen)
+router.get("/products/women", fetchProductsForWomen)
+
 
 router.post("/create-checkout-session", checkOutPayment);
 const endpointSecret = process.env.ENDPOINTSECRER;
