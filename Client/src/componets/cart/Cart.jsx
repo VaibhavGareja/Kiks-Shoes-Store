@@ -2,6 +2,7 @@ import axios from "axios";
 import { clearCart } from "../../store/cartSlice";
 import CartProduct from "./CartProduct";
 import { useDispatch, useSelector } from "react-redux";
+const backendUrl = "https://kiks-shoes-store.onrender.com"
 const Cart = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.products);
@@ -21,7 +22,7 @@ const Cart = () => {
       totalPrice
     }
     axios
-      .post("https://api.render.com/deploy/srv-cq9ta12ju9rs73bacd4g?key=KeiE0KAW03I/create-checkout-session", {data})
+      .post(`${backendUrl}/create-checkout-session`, {data})
       .then((res) => {
         console.log(res);
         if (res.data.url) {

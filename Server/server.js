@@ -17,7 +17,11 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../Client/dist")));
 app.use(bodyParser.raw({ type: "application/json" }));
 app.use(cors());
-
+app.use(cors({
+  origin: 'https://kiks-shoes-store.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use("/", productRoute);
 app.use("/auth", userRoute);
 
