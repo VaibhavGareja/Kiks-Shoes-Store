@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
           View all {">"}
         </h4>
       </div>
-      <div className="container py-5 grid sm:grid-cols-1 gap-5 mt-5 md:grid-cols-2 lg:grid-cols-4 h-auto w-auto">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-20">
         {status === "loading" ? (
           <p>Loading...</p>
         ) : status === "failed" ? (

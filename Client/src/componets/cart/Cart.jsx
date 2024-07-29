@@ -3,6 +3,7 @@ import { clearCart } from "../../store/cartSlice";
 import CartProduct from "./CartProduct";
 import { useDispatch, useSelector } from "react-redux";
 const backendUrl = "https://kiks-shoes-store.onrender.com"
+// const backendUrl = "http://localhost:3000";
 const Cart = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.cart.products);

@@ -5,6 +5,7 @@ import moon from "/moon.png";
 import SignUp from "./Form/SignUp";
 import { useSelector, useDispatch } from "react-redux";
 // import { openCloseButton } from "../store/closeBtnSlice";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import { logoutUser } from "../store/userSlice";
 import { useState } from "react";
 
@@ -14,7 +15,6 @@ const NevBar = () => {
   const user = useSelector((state) => state.user.userInfo);
   const cartProducts = useSelector((state) => state.cart.products);
   const [showDropdown, setShowDropdown] = useState(false);
-
 
   // const toggleSignUp = () => {
   //   dispatch(openCloseButton());
@@ -66,29 +66,39 @@ const NevBar = () => {
             </span>
           </li>
         </Link> */}
-        <Link className="list relative" to="" onClick={() => setShowDropdown(!showDropdown)}>
+        <Link
+          className="list relative"
+          to=""
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
           <li>
             <span className="material-symbols-outlined hover:text-pink-500 h-10 mt-2">
               person
             </span>
             {showDropdown && (
-            <div className="absolute top-full right-0 mt-2 w-68 bg-white rounded-lg shadow-xl">
-              {user ? (
-                <div className="py-1">
-                <p className="px-4 py-2 text-center text-gray-800">{user.firstName} {user.lastName}</p>
-                <button onClick={handleLogout} className=" hero-btn mx-4 w-48 block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100  text-center">
-                  Logout
-                </button>
+              <div className="absolute top-full right-0 mt-2 w-68 bg-white rounded-lg shadow-xl">
+                {user ? (
+                  <div className="py-1">
+                    <p className="px-4 py-2 text-center text-gray-800">
+                      {user.firstName} {user.lastName}
+                    </p>
+                    <button
+                      onClick={handleLogout}
+                      className=" hero-btn mx-4 w-48 block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100  text-center"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <SignUp />
+                  </div>
+                )}
               </div>
-              ) : (
-                <div>
-                  <SignUp />
-                </div>
-              )}
-            </div>
-          )}
+            )}
           </li>
         </Link>
+        <FavoriteBorderOutlinedIcon className="hover:text-pink-500 h-10 mt-2" />
         <Link className="list" target="_self" to="cart">
           <li>
             <span className="material-symbols-outlined hover:text-pink-500 h-10 mt-2">
