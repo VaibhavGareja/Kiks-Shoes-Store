@@ -7,7 +7,7 @@ const BestSellerProductMen = () => {
   const { filteredProducts } = useSelector((state) => state.products);
 
   const p1 = filteredProducts.find(
-    (product) => product.name === "Adidas Falcon Shoes for men - 2024 Edition"
+    (product) => product?.name === "Adidas Falcon Shoes for men - 2024 Edition"
   );
   let discountedPrice;
   if (p1) {

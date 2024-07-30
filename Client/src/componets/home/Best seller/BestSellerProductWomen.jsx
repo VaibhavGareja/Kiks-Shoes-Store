@@ -6,7 +6,7 @@ const BestSellerProductWomen = () => {
 
   const { filteredProducts } = useSelector((state) => state.products);
   const p1 = filteredProducts.find(
-    (product) => product.name === "Adidas Falcon Shoes for Women - 2024 Edition"
+    (product) => product?.name === "Adidas Falcon Shoes for Women - 2024 Edition"
   );
   let discountedPrice;
   if (p1) {
@@ -38,7 +38,7 @@ const BestSellerProductWomen = () => {
         </div>
         <div className="text-lg py-3 w-72">
           <p id="bestSellerShoesText" className="top-p-name  fw-bolder">
-            {p1.name}
+            {p1?.name}
           </p>
           <p className="top-p-price pt-2 font-semibold">
             ${discountedPrice}{" "}
