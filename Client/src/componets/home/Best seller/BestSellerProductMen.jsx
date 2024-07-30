@@ -50,7 +50,7 @@ const BestSellerProductMen = () => {
         <button
           id="shopNow"
           onClick={handleClick}
-          className=" bg-blue-600 border-blue-600 border-2  rounded p-2  hover:bg-white "
+          className=" bg-blue-600 border-blue-600 border-2  rounded p-2  hover:bg-white hover:!text-blue-800"
         >
           Shop Now
         </button>
