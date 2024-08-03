@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
       <hr />
       <p>© 2024 Kiks Square Store - Created by Vaibhav Gareja</p>
     </div>

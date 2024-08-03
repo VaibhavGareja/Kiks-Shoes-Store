@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
   };
 
   return (
-    <div className="container   f-product py-5 mx-auto px-28  lg:px-28">
+    <div className="container max-w-7xl f-product py-5 mx-auto px-28  lg:px-28">
       <div className=" flex flex-col justify-center items-center space-y-5 lg:flex-row lg:items-center lg:justify-between ">
         <h1 className="text-3xl font-bold lg:text-5xl ">Featured Products</h1>
         <h4

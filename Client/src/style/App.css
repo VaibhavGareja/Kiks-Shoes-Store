@@ -8,33 +8,6 @@
   font-family: 'Work Sans', sans-serif;
 }
 
-/* hero */
-.hero-btn {
-  background-color: #FF3C78;
-  color: white;
-  border: 1px solid transparent;
-  padding: 10px 47px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-
-.hero-btn:hover {
-  background-color: white;
-  color: #FF3C78;
-  border: 1px solid #FF3C78;
-}
-
-.hero-image img {
-  height: 500px;
-  transition: 1s;
-}
-
-.hero-image img:hover {
-  transform: rotate(20deg);
-}
-
-
-
 
 /* best seller */
 
@@ -61,12 +34,6 @@
   margin-left: 50px;
   max-width: 160%;
   width: 45rem;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
 }
 
 #shopNow {
