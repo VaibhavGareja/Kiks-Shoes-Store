@@ -21,23 +21,28 @@ const BestSellerProductWomen = () => {
   };
 
   return (
-    <div className="bestSeller mt-5 d-flex justify-content-between align-items-center">
+    <div className="bestSeller mt-5 flex flex-col md:flex-row items-center justify-between">
       <div
-        className="shoes-display  inline-block relative  bg-gradient-to-l from-rose-500 to-rose-300"
+        className="w-full md:w-[250px] lg:w-[400px] lg:h-[400px] md:h-[300px] max-sm:rounded-2xl lg:md:rounded-e-2xl relative bg-gradient-to-l from-rose-500 to-rose-300 mb-5 md:mb-0"
         id="shoesDisplay"
       >
-        <img id="sellerShoes" src="https://res.cloudinary.com/dcefdve9n/image/upload/v1713518194/Kiks-store/shoes/198192028-5775ca40-548c-4ea3-98fa-e1d8d80634c2_o4u0am_a_hflip_wijm3o.png" alt="women-shoes" />
+        <img
+          id="sellerShoes"
+          className="mt-5  lg:ml-12 md:ml-5 w-[160%] md:max-w-[160%] h-full"
+          src="https://res.cloudinary.com/dcefdve9n/image/upload/v1713518194/Kiks-store/shoes/198192028-5775ca40-548c-4ea3-98fa-e1d8d80634c2_o4u0am_a_hflip_wijm3o.png"
+          alt="women-shoes"
+        />
       </div>
-      <div className="best-p-detail mr-36  d-flex flex-column justify-content-center">
-        <div className="rating">
+      <div className="best-p-detail md:mr-16 lg:mr-36 flex flex-col items-start md:items-start">
+        <div className="rating flex justify-center md:justify-start mb-2">
           <i className="fa fa-star px-1 text-yellow-500"></i>
           <i className="fa fa-star px-1 text-yellow-500"></i>
           <i className="fa fa-star px-1 text-yellow-500"></i>
           <i className="fa fa-star px-1 text-yellow-500"></i>
           <i className="fa fa-star"></i>
         </div>
-        <div className="text-lg py-3 w-72">
-          <p id="bestSellerShoesText" className="top-p-name  fw-bolder">
+        <div className="text-xl py-3 w-72 text-start md:text-left">
+          <p id="bestSellerShoesText" className="top-p-name font-bold">
             {p1?.name}
           </p>
           <p className="top-p-price pt-2 font-semibold">
@@ -48,9 +53,8 @@ const BestSellerProductWomen = () => {
           
         </div>
         <button
-          id="shopNow"
           onClick={handleClick}
-          className=" bg-cpink border-cpink border-2  rounded p-2  hover:bg-white "
+          className=" w-full bg-cpink border-cpink border-2 rounded p-2 text-white hover:!text-cpink hover:bg-white"
         >
           Shop Now
         </button>

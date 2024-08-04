@@ -25,12 +25,12 @@ const ProductsCard = ({ product }) => {
   //   console.log("Product added to cart:", name);
   // };
   return (
-    <div className="w-full sm:w-80 md:w-auto lg:w-auto shadow-md rounded-xl bg-pink-50 p-6 relative overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+    <div className="w-full max-sm:my-2  sm:w-80 md:w-80 lg:w-auto shadow-md rounded-xl bg-pink-50 p-6 relative overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
       <div className="relative z-10 flex justify-center mb-4">
         <img
           className="h-40 w-auto transform transition-transform hover:scale-110"
-          src={product.imgSrc}
-          alt={product.name}
+          src={imgSrc}
+          alt={name}
         />
       </div>
       <div className="relative z-10 text-center mb-2">

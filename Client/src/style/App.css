@@ -11,30 +11,28 @@
 
 /* best seller */
 
-.shoes-display {
+/* .shoes-display { */
+  /* border-radius: 0px 10px 10px 0px; */
+  /* width: 450px;
+  height: 400px;
+} */
+/* .shoes-display-women {
   border-radius: 0px 10px 10px 0px;
   width: 450px;
   height: 400px;
-}
-.shoes-display-women {
-  border-radius: 0px 10px 10px 0px;
-  width: 450px;
-  height: 400px;
-}
+} */
 
-
-
-.shoes-display img {
+/* .shoes-display img {
   margin-top: 20px;
   margin-left: 50px;
   max-width: 160%;
-}
-.shoes-display-women img {
+} */
+/* .shoes-display-women img {
   margin-top: 20px;
   margin-left: 50px;
   max-width: 160%;
   width: 45rem;
-}
+} */
 
 #shopNow {
   color: white;
