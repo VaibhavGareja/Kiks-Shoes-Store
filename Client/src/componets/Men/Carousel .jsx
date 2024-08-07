@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const images = [
   "https://res.cloudinary.com/dcefdve9n/image/upload/v1713256951/Kiks-store/men/new-arrival-template-your-online-store_1361-1293_txiddw.avif",
@@ -27,7 +27,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative mx-28 h-96">
+    <div className="relative mx-auto h-80 sm:h-96 max-w-full overflow-hidden">
       {images.map((image, index) => (
         <div
           key={index}
@@ -43,15 +43,14 @@ const Carousel = () => {
         </div>
       ))}
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-700 px-3 py-1 text-5xl rounded-md"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-700 px-2 py-1 text-2xl sm:text-3xl md:text-5xl rounded-md"
         onClick={prevSlide}
       >
         {`<`}
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-700 text-5xl  px-3 py-1 rounded-md"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-700 px-2 py-1 text-2xl sm:text-3xl md:text-5xl rounded-md"
         onClick={nextSlide}
-
       >
         {`>`}
       </button>

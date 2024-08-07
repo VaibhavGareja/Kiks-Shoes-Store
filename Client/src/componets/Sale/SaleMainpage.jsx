@@ -11,10 +11,8 @@ const SaleMainpage = () => {
   const [productsPerPage, setProductsPerPage] = useState(6);
   const status = useSelector((state) => state.products.status);
   const error = useSelector((state) => state.products.error);
-  
   const products = useSelector((state) => state.products.filteredProducts);
   const { filteredData, setSearch } = useSearch(products);
-
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -32,57 +30,64 @@ const SaleMainpage = () => {
   if (status === "failed") {
     return <div>Error: {error}</div>;
   }
+
   const handlePageChange = (event, newPage) => {
     setCurrentPage(newPage);
   };
+
   const handleProductsPerPageChange = (event) => {
     const newProductsPerPage = parseInt(event.target.value);
     setProductsPerPage(newProductsPerPage);
   };
+
+
   return (
     <div className="m-4">
-      <div>
+      <div className="flex justify-between items-center mb-4">
         <input
           type="text"
           name="search"
-          placeholder="Serach... "
+          placeholder="Search..."
           onChange={(e) => setSearch(e.target.value)}
-          className="border border-gray-500  rounded ml-3 p-1 pl-2"
+          className="border border-gray-500 rounded p-1 pl-2"
         />
       </div>
-      <hr className="mt-3 " />
-      <div className="grid grid-cols-3">
-        {paginatedProducts.map((product) => (
-          <ProductsCard key={product._id} product={product} />
-        ))}
-      </div>
-      <div className="flex items-center justify-center mt-5  h-20">
-        {filteredData.length > productsPerPage && (
-          <Pagination
-            count={Math.ceil(filteredData.length / productsPerPage)}
-            page={currentPage}
-            onChange={handlePageChange}
-            variant="outlined"
-            shape="rounded"
-            size="large"
-          />
-        )}
-        <select
-          value={productsPerPage}
-          className=" text-base selection "
-          onChange={handleProductsPerPageChange}
-        >
-          <option value="6" className="bg-cpink text-white">
-            6 /page
-          </option>
-          <option value="10" className="bg-cpink text-white">
-            10 /page
-          </option>
-        </select>
+      <hr className="mt-3" />
+      <div className="flex">
+        <div className="w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {paginatedProducts.map((product) => (
+              <ProductsCard key={product._id} product={product} />
+            ))}
+          </div>
+          <div className="flex items-center justify-center mt-5 h-20">
+            {filteredData.length > productsPerPage && (
+              <Pagination
+                count={Math.ceil(filteredData.length / productsPerPage)}
+                page={currentPage}
+                onChange={handlePageChange}
+                variant="outlined"
+                shape="rounded"
+                size="large"
+              />
+            )}
+            <select
+              value={productsPerPage}
+              className="text-base selection ml-2"
+              onChange={handleProductsPerPageChange}
+            >
+              <option value="6" className="bg-cpink text-white">
+                6 /page
+              </option>
+              <option value="10" className="bg-cpink text-white">
+                10 /page
+              </option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default SaleMainpage;
-

@@ -17,9 +17,9 @@ const Hero = () => {
             We offer the best deals in our shop. Check them out now. We have
             awesome stuff on sale for you.
           </p>
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex max-sm:justify-center md:justify-start lg:justify-start">
             <button
-              className=" mt-3 bg-[#FF3C78] text-white border px-5 py-2 rounded-md border-solid border-transparent hover:bg-white hover:!text-[#FF3C78] hover:border-![#FF3C78]"
+              className="  mt-3 bg-[#FF3C78] text-white border px-5 py-2 rounded-md border-solid border-transparent hover:bg-white hover:!text-[#FF3C78] hover:border-![#FF3C78]"
               onClick={handleShopNow}
             >
               Shop Now

@@ -13,15 +13,16 @@ const Men = () => {
       dispatch(setCategories({ category: "Men" }));
     });
   }, [dispatch]);
+
   return (
     <>
       <Carousel />
-      <div className="mx-28 h-auto  flex">
-        <div className="w-1/4 ">
+      <div className="mx-auto px-4 md:px-12 lg:mx-28 h-auto flex flex-col lg:flex-row">
+        <div className="w-full lg:w-1/4 mb-6 lg:mb-0">
           <ProductsSiderBar />
         </div>
-        <div className="w-3/4 ">
-          <ProductMainPage  />
+        <div className="w-full lg:w-3/4">
+          <ProductMainPage />
         </div>
       </div>
     </>
