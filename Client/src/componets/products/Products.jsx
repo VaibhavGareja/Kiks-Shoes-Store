@@ -12,7 +12,7 @@ const Products = () => {
     });
   }, [dispatch]);
   return (
-    <div className="mx-auto px-4 md:px-12 lg:mx-28 h-auto flex flex-col lg:flex-row">
+    <div className="mx-auto max-w-7xl px-4 md:px-12 lg:mx-28 h-auto flex flex-col lg:flex-row">
       <div className="w-full lg:w-1/4 mb-6 lg:mb-0 ">
         <ProductsSiderBar />
       </div>

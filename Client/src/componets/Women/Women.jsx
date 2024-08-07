@@ -17,7 +17,7 @@ const Women = () => {
   return (
     <>
       <Carousel />
-      <div className="mx-4 md:mx-8 lg:mx-28 h-auto flex flex-col lg:flex-row">
+      <div className="mx-4 max-w-7xl md:mx-8 lg:mx-28 h-auto flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/4 mb-4 lg:mb-0">
           <ProductsSiderBar />
         </div>

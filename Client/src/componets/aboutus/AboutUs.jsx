@@ -3,7 +3,7 @@ import Testimonials from "./Testimonials";
 
 const AboutUs = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-28">
+    <div className="max-w-7xl container px-4 sm:px-6 lg:px-28">
       <h3 className="text-cpink text-xl text-center mb-2">WHO WE ARE</h3>
       <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center font-bold mb-10">
         ABOUT US
