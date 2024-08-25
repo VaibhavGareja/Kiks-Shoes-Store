@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "install": "cd ../Client && npm install",
-    "build": "cd ../Client && npm run build",
+    "install": "npm install", 
+    "build": "npm run build", 
     "render-build": "npm install && npm run build"
   },
   "author": "",
