@@ -1,5 +1,5 @@
 import axios from "axios";
-const backendUrl = "https://kiks-shoes-store.onrender.com"
+const backendUrl = "https://kiks-shoes-store-backend.onrender.com"
 // const backendUrl = "http://localhost:3000";
 
 export function fetchAllProductData() {
