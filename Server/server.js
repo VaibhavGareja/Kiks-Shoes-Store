@@ -26,30 +26,6 @@ app.use(cors({
 app.use("/", productRoute);
 app.use("/auth", userRoute);
 
-// Serve static files if necessary
-// Comment or remove if frontend is hosted separately
-// app.use(express.static(path.join(__dirname, "../Client/dist")));
-
-// Fallback route for serving frontend (if applicable)
-// Comment or remove if frontend is hosted separately
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../Client/dist", "index.html"));
-// });
-
-// Example database seeding (if needed)
-// Comment or uncomment based on your needs
-// (async () => {
-//   try {
-//     for (const product of productData.shoes) {
-//       const newProduct = new Product(product);
-//       await newProduct.save();
-//     }
-//     console.log("Products inserted into the database successfully");
-//   } catch (err) {
-//     console.error("Error inserting products into the database:", err);
-//   }
-// })();
-
 app.listen(PORT, () => {
   console.log(`Server started at port ${PORT}`);
 });
