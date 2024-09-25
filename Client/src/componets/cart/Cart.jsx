@@ -64,7 +64,7 @@ const Cart = () => {
         <>
           <hr />
           <div className="flex justify-between mt-4 mr-32">
-            <h2 className="text-xl ml-14 font-bold text-cpink">Total Price:</h2>
+            <h2 className="text-2xl ml-14 font-bold text-cpink">Total Price:</h2>
             <button
               className="text-xl float-end hero-btn"
               onClick={handlePayBtn}
