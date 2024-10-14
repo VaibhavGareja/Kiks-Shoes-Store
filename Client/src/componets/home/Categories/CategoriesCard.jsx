@@ -6,7 +6,7 @@ const CategoryCard = ({ id, title, color, image, products }) => {
     <>
       <div
         id={id}
-        className="max-sm:h-[200px] max-sm:w-[200px] lg:h-[324px] lg:w-[330px] md:h-[220px] md:w-[230px] grid-cols-2 justify-between bg-gray-100 rounded-3xl p-6 max-sm:mb-12 lg:my-5 md:my-5 overflow-hidden"
+        className="max-sm:h-[260px] max-sm:w-[260px] lg:h-[324px] lg:w-[330px] md:h-[210px] md:w-[210px] grid-cols-2 justify-between bg-gray-100 rounded-3xl p-6 max-sm:mb-12 lg:my-5 md:my-5 overflow-hidden"
       >
         <div className="flex">
           <div className="lg:px-3">
@@ -30,7 +30,7 @@ const CategoryCard = ({ id, title, color, image, products }) => {
           ></div>
         </div>
         <div className="absolute transform translate-x-1/4 translate-y-1/4">
-          <img src={image} alt={title} className="max-sm:w-28 sm:h-28 lg:w-60 lg:h-60 ml-5 md:w-40 md:h-40 " />
+          <img src={image} alt={title} className="max-sm:w-40 sm:h-40 lg:w-60 lg:h-60 ml-5 md:w-36 md:h-36 " />
         </div>
       </div>
     </>
